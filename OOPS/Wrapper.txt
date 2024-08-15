@@ -1,0 +1,35 @@
+package Kunal.JavaOOPS;
+
+public class WrapperExample {
+    public static void main(String[] args) {
+        int a = 10;
+        Integer num = 34;//Wrapper class- u can use many functions
+
+        final int bonus = 3;//cannot modify this varibale bcoz of final keyword
+
+        final A kunal = new A("Kunal Kushwaha");
+        kunal.name = "other name";
+    }
+
+    static  void swap(Integer a,Integer b){
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+
+}
+
+class A{
+    final int num = 10;//primitive data type
+    String name;
+
+    public A(String name){
+        this.name = name;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Object is being destroyed");
+    }
+}
