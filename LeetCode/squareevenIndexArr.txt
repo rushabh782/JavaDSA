@@ -1,0 +1,21 @@
+public int[] squareEven(int[] array, int length) {
+    //edge case
+    if(array == null){
+        return null;
+    }
+    
+    //create new array for storing ans
+    int[] result = new int[length];
+    
+    //take values from original arr and modify new arr
+    for(int i = 0 ; i < length; i++){
+        int element = array[i];
+        
+        if(i % 2 == 0){
+            element *= element;
+        }
+        
+        result[i] = element;
+    }
+    return result;
+}
