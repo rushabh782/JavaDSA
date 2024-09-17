@@ -9,7 +9,7 @@ public class Basic{
         //type Week
 
         Week(){
-            System.out.println("Constructor called for "+this);
+            System.out.println("Constructor called for "+this);//Prints all values from Monday to Sunday
 
             //this is not public or protected, only private or default
             //why? we don't want to create new objects
@@ -27,7 +27,7 @@ public class Basic{
         Week week;
         week = Week.Monday;
         week.hello();
-        System.out.println(week.ordinal());
+        System.out.println(week.ordinal());//position of enum declaration
 
 
         for (Week day:Week.values()){
